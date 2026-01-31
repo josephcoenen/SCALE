@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&family=Outfit:wght@800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary-yellow: #e8e337;
+    --dark-charcoal: #3e3e3e;
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+    --accent-gray: #d1d5db;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--white);
+    color: var(--dark-charcoal);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+.font-heading {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.02em;
+}
+
+.bg-yellow {
+    background-color: var(--primary-yellow);
+}
+
+.text-yellow {
+    color: var(--primary-yellow);
+}
+
+.bg-charcoal {
+    background-color: var(--dark-charcoal);
+}
+
+.text-charcoal {
+    color: var(--dark-charcoal);
+}
+
+/* Brochure Layout Elements */
+.diagonal-cut {
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+    padding-bottom: 2rem;
+}
+
+.overlapping-headline {
+    position: absolute;
+    top: -10%;
+    left: -15%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.circle-panel {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+    position: relative;
+}
+
+.addon-card {
+    background-color: var(--primary-yellow);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.addon-card:hover {
+    transform: translateY(-5px);
+}
+
+.addon-card img {
+    max-height: 60%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+/* Technical Illustration Style */
+.hand-drawn-border {
+    border: 2px solid var(--dark-charcoal);
+    box-shadow: 4px 4px 0px var(--dark-charcoal);
+}
+
+.scenario-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid var(--dark-charcoal);
+    overflow: hidden;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Custom Scrollbar for brochure feel */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--light-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-yellow);
+}
